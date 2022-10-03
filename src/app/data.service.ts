@@ -150,21 +150,21 @@ export class DataService {
       this.rowTwo[0].team !== ""){
       this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
     if(this.rowOne[1].team === this.rowTwo[1].team &&
       this.rowTwo[1].team === this.rowThree[1].team &&
       this.rowTwo[1].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
     if(this.rowOne[2].team === this.rowTwo[2].team &&
       this.rowTwo[2].team === this.rowThree[2].team &&
       this.rowTwo[2].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
   }
   checkRows(){
@@ -173,21 +173,21 @@ export class DataService {
       this.rowOne[1].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
     if(this.rowTwo[0].team === this.rowTwo[1].team &&
       this.rowTwo[1].team === this.rowTwo[2].team &&
       this.rowTwo[1].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
     if(this.rowThree[0].team === this.rowThree[1].team &&
       this.rowThree[1].team === this.rowThree[2].team &&
       this.rowThree[1].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
   }
   checkDiagonals(){
@@ -196,14 +196,14 @@ export class DataService {
       this.rowTwo[1].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
     if(this.rowOne[2].team === this.rowTwo[1].team &&
       this.rowTwo[1].team === this.rowThree[0].team &&
       this.rowTwo[1].team !== ""){
         this.currentTeam.points++;
         this.reset();
-        alert(this.currentTeam.name + " team wins!");
+        alert(this.currentTeam.name + " wins!");
     }
   }
 }
