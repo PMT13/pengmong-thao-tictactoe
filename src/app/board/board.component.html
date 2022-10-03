@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+      <app-box-component *ngFor="let box of rowOne" [box]="box"></app-box-component>
+  </div>
+  <div class="row">
+    <app-box-component *ngFor="let box of rowTwo" [box]="box"></app-box-component>
+  </div>
+  <div class="row">
+    <app-box-component *ngFor="let box of rowThree" [box]="box"></app-box-component>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+  <label for="teamOne">Team 1:</label>
+  <div>
+    <input id="teamOne" type="text" name="teamOne" [(ngModel)]="teamOne">
+  </div>
+  <label for="teamTwo">Team 2:</label>
+  <div>
+    <input id="teamTwo" type="text" name="teamTwo" [(ngModel)]="teamTwo">
+  </div>
+  <select [(ngModel)]="games">
+    <option value="1">1 games</option>
+    <option value="3">3 games</option>
+    <option value="5">5 games</option>
+  </select>
+</div>
+<button (click)="setTeams()">Let's Go!</button>
