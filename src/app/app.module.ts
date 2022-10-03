@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TeamSelectionComponent } from './team-selection/team-selection.component';
 import {FormsModule} from "@angular/forms";
 import { BoxComponentComponent } from './box-component/box-component.component';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
     TeamSelectionComponent,
-    BoxComponentComponent
+    BoxComponentComponent,
+    ScoreboardComponent
   ],
     imports: [
         BrowserModule,

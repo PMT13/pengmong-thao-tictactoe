@@ -10,6 +10,7 @@ import {Subscription} from "rxjs";
 export class TeamSelectionComponent implements OnInit {
 
   sub: Subscription;
+  subTwo: Subscription;
   teamOne: string = "";
   teamTwo: string = "";
   games: number = 1;
@@ -17,7 +18,7 @@ export class TeamSelectionComponent implements OnInit {
     this.sub = this.data.$teamOne.subscribe((name) => {
       this.teamOne = name;
     });
-    this.sub = this.data.$teamTwo.subscribe((name) => {
+    this.subTwo = this.data.$teamTwo.subscribe((name) => {
       this.teamTwo = name;
     });
   }

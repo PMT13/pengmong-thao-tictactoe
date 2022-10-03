@@ -1,6 +1,8 @@
 .row{
   width:33%;
   flex-wrap: nowrap;
+  font-size: 10em;
+  text-align: center;
 }
 .row>*{
   padding:0;

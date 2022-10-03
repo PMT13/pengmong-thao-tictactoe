@@ -1,5 +1,7 @@
 export interface IBox{
   id: string,
   empty: boolean,
-  team: string
+  team: string,
+  row: number,
+  index: number
 }

@@ -1,3 +1,4 @@
-<app-team-selection></app-team-selection>
-<app-board></app-board>
+<app-team-selection *ngIf="setupDone === false"></app-team-selection>
+<app-scoreboard *ngIf="setupDone === true"></app-scoreboard>
+<app-board *ngIf="setupDone === true"></app-board>
 
