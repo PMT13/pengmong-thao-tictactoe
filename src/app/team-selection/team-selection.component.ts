@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DataService} from "../data.service";
 import {Subscription} from "rxjs";
 
@@ -7,15 +7,15 @@ import {Subscription} from "rxjs";
   templateUrl: './team-selection.component.html',
   styleUrls: ['./team-selection.component.css']
 })
-export class TeamSelectionComponent implements OnInit {
+export class TeamSelectionComponent implements OnInit,OnDestroy {
 
-  sub: Subscription;
+  subOne: Subscription;
   subTwo: Subscription;
   teamOne: string = "";
   teamTwo: string = "";
   games: number = 1;
   constructor(private data: DataService) {
-    this.sub = this.data.$teamOne.subscribe((name) => {
+    this.subOne = this.data.$teamOne.subscribe((name) => {
       this.teamOne = name;
     });
     this.subTwo = this.data.$teamTwo.subscribe((name) => {
@@ -24,6 +24,10 @@ export class TeamSelectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  ngOnDestroy() {
+    this.subOne.unsubscribe();
+    this.subTwo.unsubscribe();
   }
 
   setTeams(){

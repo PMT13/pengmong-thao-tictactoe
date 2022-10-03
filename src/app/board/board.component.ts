@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {IBox} from "../interfaces/IBox";
 import {DataService} from "../data.service";
 import {Subscription} from "rxjs";
@@ -8,7 +8,7 @@ import {Subscription} from "rxjs";
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.css']
 })
-export class BoardComponent implements OnInit {
+export class BoardComponent implements OnInit,OnDestroy {
 
   rowOne: IBox[] = this.data.getRow(0);      // board layout, split up into three rows
   rowTwo: IBox[] = this.data.getRow(1);
@@ -29,4 +29,9 @@ export class BoardComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  ngOnDestroy(){
+    this.subOne.unsubscribe();
+    this.subTwo.unsubscribe();
+    this.subThree.unsubscribe();
+  }
 }
